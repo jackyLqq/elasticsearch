@@ -1,0 +1,12 @@
+grant {
+    permission javax.management.MBeanTrustPermission "register";
+    permission java.lang.RuntimePermission "createClassLoader";
+    permission java.lang.RuntimePermission "setContextClassLoader";
+    permission org.elasticsearch.secure_sm.ThreadPermission "modifyArbitraryThreadGroup";
+	permission java.util.PropertyPermission "es.logs.base_path", "read, write";
+	permission java.util.PropertyPermission "es.logs.cluster_name", "read, write";
+	permission java.lang.management.ManagementPermission "monitor";
+    permission java.util.PropertyPermission "*", "read";
+	permission org.elasticsearch.SpecialPermission "*";
+	permission java.lang.RuntimePermission "*";
+};
